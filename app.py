@@ -9,10 +9,6 @@ st.set_page_config(
 
 st.sidebar.title("📊 Trading Dashboard")
 st.sidebar.markdown("---")
-st.sidebar.markdown("### Navegación")
-st.sidebar.markdown("[🌐 Market Overview](pages/1_Market_Overview)")
-st.sidebar.markdown("[📓 Trading Journal](pages/2_Trading_Journal)")
-st.sidebar.markdown("---")
 st.sidebar.markdown("**Meta TopStep:** $10,000 USD")
 
 st.title("📈 Nuevo Horizonte — Trading Dashboard")
