@@ -1,4 +1,4 @@
-# 📈 Nuevo Horizonte — Trading Dashboard
+# 📈 TIC — Trading Dashboard
 
 Dashboard web de trading con Market Overview en tiempo real y Trading Journal con KPIs automáticos.
 
