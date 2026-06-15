@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="Nuevo Horizonte Trading",
+    page_title="TRADING INTERNACIONAL COLOMBIA",
     page_icon="📈",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -11,7 +11,7 @@ st.sidebar.title("📊 Trading Dashboard")
 st.sidebar.markdown("---")
 st.sidebar.markdown("**Meta TopStep:** $10,000 USD")
 
-st.title("📈 Nuevo Horizonte — Trading Dashboard")
+st.title("📈 TRADING INTERNACIONAL COLOMBIA — Trading Dashboard")
 st.markdown("Bienvenido a tu dashboard de trading. Selecciona una sección en el menú lateral.")
 
 col1, col2 = st.columns(2)
