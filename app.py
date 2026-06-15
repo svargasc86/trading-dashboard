@@ -10,8 +10,8 @@ st.set_page_config(
 st.sidebar.title("📊 Trading Dashboard")
 st.sidebar.markdown("---")
 st.sidebar.markdown("### Navegación")
-st.sidebar.page_link("pages/1_Market_Overview.py", label="🌐 Market Overview", icon="🌐")
-st.sidebar.page_link("pages/2_Trading_Journal.py", label="📓 Trading Journal", icon="📓")
+st.sidebar.page_link("pages/1_Market_Overview.py", label="🌐 Market Overview")
+st.sidebar.page_link("pages/2_Trading_Journal.py", label="📓 Trading Journal")
 st.sidebar.markdown("---")
 st.sidebar.markdown("**Meta TopStep:** $10,000 USD")
 
