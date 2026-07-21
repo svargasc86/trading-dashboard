@@ -4,7 +4,3 @@ backgroundColor = "#0e1117"
 secondaryBackgroundColor = "#1c1f26"
 textColor = "#fafafa"
 font = "sans serif"
-
-[server]
-enableCORS = false
-enableXsrfProtection = false
