@@ -39,6 +39,40 @@ if "journal" not in st.session_state:
     st.session_state.journal = load_journal()
 
 # ---------------------------------------------------------
+# BACKUP / RESTAURAR
+# ---------------------------------------------------------
+st.markdown("### 💾 Backup y restauración")
+
+b1, b2 = st.columns(2)
+
+with b1:
+    st.markdown("**Descargar backup**")
+    backup_json = json.dumps(st.session_state.journal, indent=2, default=str)
+    st.download_button(
+        label="📥 Descargar backup (.json)",
+        data=backup_json,
+        file_name=f"trading_journal_backup_{date.today()}.json",
+        mime="application/json",
+    )
+    st.caption("Guarda este archivo en tu computador. Recomendado: descárgalo cada vez que agregues varios registros nuevos.")
+
+with b2:
+    st.markdown("**Restaurar desde un backup**")
+    uploaded_file = st.file_uploader("Sube un archivo .json de backup", type=["json"])
+    if uploaded_file is not None:
+        if st.button("♻️ Restaurar este backup (reemplaza el historial actual)"):
+            try:
+                restored_data = json.load(uploaded_file)
+                st.session_state.journal = restored_data
+                save_journal(restored_data)
+                st.success("✅ Backup restaurado correctamente")
+                st.rerun()
+            except Exception as e:
+                st.error(f"⚠️ El archivo no es un backup válido: {e}")
+
+st.markdown("---")
+
+# ---------------------------------------------------------
 # FORMULARIO DE NUEVO REGISTRO
 # ---------------------------------------------------------
 st.markdown("### ➕ Nuevo registro diario")
